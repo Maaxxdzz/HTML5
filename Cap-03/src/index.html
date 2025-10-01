@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Canvas
+        </title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            border: 0;
+        }
+        canvas {
+            height: 220px;
+            width: 300px;
+            border: 1px solid black;
+        }
+            
+        #canva_1 {
+            border: 2px dotted blue;
+        }
+        .simple {
+            background: lightgray;
+        }
+        .paths {
+            background: whitesmoke;
+        }
+        .textos {
+            background-color: azure;
+           
+        }
+        .gradientes {
+            background: linear-gradient(90deg , green , white ,brown, white , red);
+        }
+        .imagenes {
+            background-color: burlywood;
+        }
+        #img_imge {
+            display: none;
+        }
+    </style>
+    <body>
+
+        <div 
+             class="simple"
+        >
+            <h1>
+                Simple Shapes
+            </h1>
+            <h3>
+                Canvas con bordes
+            </h3>
+            <p>
+                <canvas 
+                        id="canvas"
+                />
+                
+            </p>
+            <p>
+                <canvas 
+                        id="canva_1"
+                />
+            </p>
+            <h3>
+                Canva con evento "onclick" y fillRect
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_identificado"
+                        onclick="dibujaforma()"
+                />
+            </p>
+            <h3>
+                Canva con fillStyle
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_identificado_2" 
+                        onclick="dibujaforma_2()" 
+                />
+            </p>
+            <h3>
+                Canva con strokeStyle y strokeRect    
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_identificado_3" 
+                        onclick="dibujaforma_3()"
+                />
+            </p>
+            <h3>
+                Canva con clearRect(1 click para aparecer, 2 clicks continuos para limpiar)
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_identificado_4" 
+                        onclick="dibujaforma_4()" 
+                        ondblclick="limpiarforma()"
+                />
+            </p>   
+        </div>    
+        <div 
+             class="paths"
+        >
+            <h1>
+                Paths
+            </h1>
+            <h3>
+                Canva con dibujo de linea
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_lineas" 
+                        onclick="dibuja_linea1()"
+                />
+                
+            </p>
+            <h3>
+                 Dibujo de linea sin patron alguno
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_l_libre" 
+                        onclick="lineas_libres()"
+                />  
+            </p>
+            <h3>
+                Lineas con diferentes "Paths"
+            </h3>
+            <p>
+                <canvas 
+                        id="canva_path" 
+                        onclick="lineas_colores()"
+                />   
+                
+            </p>
+            <h3>
+                Ejemplo del libro 
+            </h3>
+            <p>
+                <canvas 
+                        id="ejemplo_path" 
+                        onclick="ejemplo()"
+                />
+                
+            </p>
+        </div>
+        <div 
+             class="textos"
+        >
+            <h1>
+                Textos
+            </h1>
+            <h3>
+                Canva con textos y fuentes
+            </h3>
+            <p>
+                <canvas 
+                        id="font_text" 
+                        onclick="fuentes()"
+                />
+            </p>
+        </div>
+        <div 
+             class="gradientes"
+        >
+            <h1>
+                Degradados
+            </h1>
+            <p>
+                <canvas 
+                        id="gradi" 
+                        onclick="gradie()"
+                />
+            </p>
+
+        </div>
+        <div 
+             class="imagenes"
+        >
+            <h1>
+                Imagenes
+            </h1>
+            <h3>
+                Imagen con elemento "img"
+            </h3>
+            <p>
+                <img 
+                     width="100" 
+                     height="100" 
+                     src="imagenes/ejemplo.jpg" 
+                     id="imge"
+                >
+                <canvas 
+                        id="imagen"
+                />
+                 
+            </p>
+            <h3>Imagen repetida</h3>
+            <p>
+                <canvas 
+                        id="img_imge"
+                />    
+            </p>
+            <p>
+                <canvas 
+                        id="img_repetida"
+                />
+            </p>
+
+        </div>
+        <script>
+                function dibujaforma(){
+                    var canva_i= document.getElementById("canva_identificado");
+                    var contexto_c=canva_i.getContext("2d");
+
+                    contexto_c.fillRect(50,25,150,100);
+                }
+                function dibujaforma_2(){
+                    var canva_i= document.getElementById("canva_identificado_2");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.fillStyle="blue";
+                    contexto_c.fillRect(50,25,150,100);
+                }
+                function dibujaforma_3(){
+                    var canva_i= document.getElementById("canva_identificado_3");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.strokeStyle="blue";
+                    contexto_c.strokeRect(50,25,150,100);
+                }
+                function dibujaforma_4(){
+                    var canva_i= document.getElementById("canva_identificado_4");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.fillStyle="blue";
+                    contexto_c.fillRect(50,25,150,100);
+                }
+                function limpiarforma(){
+                    var canva_i= document.getElementById("canva_identificado_4");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.clearRect(50,25,150,100);
+                }
+            
+                window.onload = function a(){
+                        var can1 =document.getElementById("imagen");
+                        var can2 = can1.getContext("2d");
+                        var canimg = document.getElementById("imge");
+                        can2.drawImage(imge , 100 , 25 ,100 , 100);
+                    };  
+                    var conva= document.getElementById("img_imge");
+                    var conva1=conva.getContext("2d");
+                    var bwu=new Image();
+                    bwu.src="imagenes/ejemplo.jpg"
+                    bwu.onload= function b(){
+                        cox.drawImage(bwu , 100, 25 ,100 ,100);        
+                        cox.drawImage(bwu , 100, 25 ,100 ,100);        
+                    };
+                    var cumba=document.getElementById("img_repetida");
+                    var cumba1=cumba.getContext("2d");
+                    bwu.onload = function c (){
+                        for(var x=0 , y=0; x < 300 && y < 255 ;x += 50 , y += 30 ){
+                            cumba1.drawImage(bwu,x,y,50,50);
+                        }
+                    }; 
+            
+                function gradie(){
+                    var can = document.getElementById("gradi");
+                    var cox = can.getContext("2d");
+                    var degradado = cox.createLinearGradient(0,0 ,300,0);
+                    degradado.addColorStop(0,"black");
+                    degradado.addColorStop(1,"white");
+                    cox.fillStyle = degradado;
+                    cox.fillRect(0,0,300,225);
+                }
+                function dibuja_linea1(){
+                    var canva= document.getElementById("canva_lineas");
+                    var can=canva.getContext("2d");
+                    
+                    for (var x = 0.5; x < 500; x += 10) {
+                        can.moveTo(x, 0);
+                        can.lineTo(x, 200);
+                    }
+                    for (var y = 0.5; y < 375; y += 10) {
+                        can.moveTo(0, y);
+                        can.lineTo(300, y);
+                    }
+                    can.strokeStyle="Red"
+                    can.stroke();
+                }
+                function lineas_libres(){
+                    var canva= document.getElementById("canva_l_libre");
+                    var can=canva.getContext("2d");
+                    
+                    can.beginPath();
+                    can.moveTo(0,0);
+                    can.lineTo(20,50);
+                    can.lineTo(50,20);
+                    can.lineTo(80,80);
+                    can.lineTo(100,50);
+                    can.lineTo(150,100);
+                    can.lineTo(170,80);
+                    can.lineTo(375,190);
+                    can.strokeStyle="Blue";
+                    can.stroke();
+                }
+                function lineas_colores(){
+                    var canva= document.getElementById("canva_path");
+                    var can=canva.getContext("2d");
+                    
+                    can.beginPath();
+                    can.moveTo(0,0);
+                    can.lineTo(80,80);
+                    can.strokeStyle="red";
+                    can.stroke();
+                    can.closePath();
+                    can.beginPath();
+                    can.moveTo(100,80)
+                    can.lineTo(200,0);
+                    can.strokeStyle="blue";
+                    can.stroke();
+                    can.closePath();
+                }
+                function ejemplo(){
+                    var canva= document.getElementById("ejemplo_path");
+                    var can=canva.getContext("2d");  
+                    can.beginPath();
+                    can.moveTo(0, 40);
+                    can.lineTo(240, 40);
+                    can.moveTo(260, 40);
+                    can.lineTo(500, 40);
+                    can.moveTo(495, 35);
+                    can.lineTo(500, 40);
+                    can.lineTo(495, 45);
+                    can.moveTo(60, 0);
+                    can.lineTo(60, 153);
+                    can.moveTo(60, 173);
+                    can.lineTo(60, 375);
+                    can.moveTo(65, 370);
+                    can.lineTo(60, 375);
+                    can.lineTo(55, 370);
+                    can.stroke();
+                }
+                function fuentes(){
+                    var can=document.getElementById("font_text");
+                    var cox=can.getContext("2d");
+                    cox.font="bold 50px sans-serif";
+                    cox.fillText("Hola", 50 , 70);
+                    cox.fillText("Mundo" , 50 , 120);
+                }
+        </script>
+    </body>
+</html>
