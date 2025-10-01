@@ -34,7 +34,9 @@ Sin embargo, estas ideas no fueron implementadas debido a su complejidad o falta
 
 Al final, **Marc Andreessen** revisó las diferentes propuestas y tomó la decisión de usar `<img src="url">`. Marc explicó:
 
-> No estamos preparados para soportar INCLUDE/EMBED en este punto... Así que probablemente optemos por `<img src="url">` (no ICON, ya que no todas las imágenes incrustadas pueden llamarse íconos). Por ahora, las imágenes incrustadas no tendrán un tipo de contenido explícito; en el futuro planeamos soportarlo (junto con la adaptación general de MIME).
+
+No estamos preparados para soportar INCLUDE/EMBED en este punto... Así que probablemente optemos por `<img src="url">` (no ICON, ya que no todas las imágenes incrustadas pueden llamarse íconos). Por ahora, las imágenes incrustadas no tendrán un tipo de contenido explícito; en el futuro planeamos soportarlo (junto con la adaptación general de MIME).
+
 
 Así, con la etiqueta `<img>`, podemos agregar imágenes de manera sencilla a nuestros proyectos.
 
