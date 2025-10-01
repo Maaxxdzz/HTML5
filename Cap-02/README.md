@@ -98,11 +98,19 @@ El atributo placeholder muestra texto de guía dentro de un campo vacío. Es muy
 ## FORM AUTOFOCUS
 autofocus permite que un campo de formulario obtenga el foco automáticamente al cargar la página. Aunque parece menor, mejora la usabilidad en formularios rápidos, como búsquedas o inicios de sesión. Se detecta con 'autofocus' in input, o usando Modernizr.input.autofocus.
 
-## MICRODATA
-Microdata permite incrustar metadatos dentro del HTML para definir con más claridad qué representa el contenido. Por ejemplo, un nombre, una dirección o una fecha de evento.
+## Micro Data
+Estos sirven para poder añadir algunas pequeñas cosas a la página web como por ejemplo señalar cosas sobre el autor o no tan extensas 
 
-Esto mejora cómo motores de búsqueda como Google interpretan la página. La detección de soporte se hace comprobando si document.getItems existe, ya que Modernizr no lo incluye directamente.
+De igual manera tienen una propiedad que es el *getText()* y si el navegador no lo soporta este será indefinido
 
+    Funcion:
+    function supports_microdata_api() {
+      return !!document.getItems;
+    }
+En este caso Modernizr no soporta este tipo de formato
+
+## Historial del API
+Hace que se pueda manipular el historial de navegación mediante "***scripts***", así una *URL* puede seguir haciendo su trabajo como identificador único para el recurso actual
 
 
 
