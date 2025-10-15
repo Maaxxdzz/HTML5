@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta 
+              charset="utf-8"
+        >
+        <title>
+            Capitulo 5 HTML5
+        </title>
+    </head>
+    <style>
+        .videos {
+            height: 50%;
+            width: 50%;
+        }
+
+    </style>
+    <body>
+        <div>
+            <h4>
+                Video sin atributos "height" y "width"
+            </h4>
+            <video
+                id="vid_h_w"
+                src="videos/videoplayback.mp4"
+            />
+        </div>
+        <div>
+            <h4>
+                Video con atributos "height" y "width" sin controles
+            </h4>
+            <video
+                class="videos"
+                id="vid_h_w"
+                src="videos/videoplayback.mp4"
+            />
+        </div>
+        <div>
+            <h4>
+                Video con controles
+            </h4>
+            <video
+                class="videos"
+                id="vid_h_w"
+                src="videos/videoplayback.mp4"
+                controls
+            />
+        </div>
+        <div>
+            <h4>
+                Video con preload="none"
+            </h4>
+            <video
+                class="videos"
+                id="vid_h_w"
+                src="videos/videoplayback.mp4"
+                controls
+                preload="none"
+            />
+        </div>
+        <div>
+            <h4>
+                Video con autoplay
+            </h4>
+            <video
+                class="videos"
+                id="vid_h_w"
+                src="videos/videoplayback.mp4"
+                controls
+                autoplay          
+            />
+        </div>
+        <div>
+            <h4>
+                Video con 3 archivos
+            </h4>
+            <video 
+                   class="videos"
+                   controls
+            >
+                <source 
+                        src="videos/videoplayback.mp4"
+                        type="video/mp4"
+                >
+                <source 
+                        src="videos/videoplayback.webm"
+                        type="video/webm"
+                >
+                <source 
+                        src="videos/videoplayback.ogg"
+                        type="video/ogg"
+                >
+            </video>
+        </div>
+    </body>
+</html>
