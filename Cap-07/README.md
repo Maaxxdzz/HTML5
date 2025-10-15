@@ -18,6 +18,7 @@ Debido a que estos y algunos otros presentaban el mismo problema "*todas sus esp
 
 Versiones de navegadores que soportan "*HTML5 Storage*"
 
+```html
 <table>
     <thead>
         <tr>
@@ -70,6 +71,7 @@ Versiones de navegadores que soportan "*HTML5 Storage*"
         </tr>
     </tbody>
 </table>
+```
 
 Con JS accederás al "*HTML5 Storage*" con el objeto de "*localStorage*" aun así se debe detectar si el navegador lo soporta.
 
@@ -156,6 +158,7 @@ La función de devolución *"handle_strogare"* va a almacenar el objeto se almac
 
 La variable "*e*" tendrá las siguientes propiedades.
 
+```html
 <table>
     <thead>
         <tr>
@@ -217,6 +220,7 @@ La variable "*e*" tendrá las siguientes propiedades.
         </tr>
     </tbody>
 </table>
+```
 
 El evento de almacenamiento no es cancelable , no hay forma de evitar que se produzca el cambio.
 
