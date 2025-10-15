@@ -183,6 +183,7 @@ Una vez obtenido, definimos el gradiente, el cual es una transición suave entre
 
 Haremos un gradiente lineal del tamaño del canvas.
 
+```javascript
     var my_gradient = context.createLinearGradient(0, 0, 300, 0);
 
 Dado que los valores `y` (que son el segundo y cuarto argumento) son igual a 0, el gradiente generará su sombra de forma simétrica de izquierda a derecha.
