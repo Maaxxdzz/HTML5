@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html 
+    lang="es"
+    manifest="index.appcache"
+>
+    <head>
+        <title>
+            Almacenamiento local
+        </title>
+        <meta charset="utf-8">
+        <style>
+            .canva {
+                width:500px;
+                height: 500px;
+                border: 2px dotted black;
+            }
+            .btn{
+                background: lightblue;
+                height: 50px;
+                width: 300px;
+                font-size: 30px;
+                position: absolute
+            }
+        </style>
+    </head>
+    <body>
+        <canvas
+            class="canva" 
+            id="canva"
+            onclick="pintarcanvarojo()"
+        ></canvas>
+        <button 
+                onclick="cargarcolor()"
+                class="btn"
+        >
+            Cargar ultimo color
+        </button>
+        <script src="scripts.js">
+        </script>
+    </body>
+</html>
