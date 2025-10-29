@@ -252,7 +252,7 @@ Para deshabilitar la validación automática, lo que haremos será utilizar el a
 		id="addr"
 	>
 	<input 
-		type="submit 
+		type="submit" 
 		value="Subscribe"
 	>
 </form>
